@@ -12,7 +12,7 @@ class CoordsController extends ResponseController
     public function getCoords()
     {
         $coords = Coords::where('status', 1)->orderBy('id')->get();
-        return $this->successResponse(['Coords' => $coords]);
+        return $this->successResponse($coords);
     }
 
     public function create(Request $request)
